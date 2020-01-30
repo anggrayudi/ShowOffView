@@ -1,1 +1,1 @@
-include ':sample', ':showoff'
+include ':sample', ':showoffview'
