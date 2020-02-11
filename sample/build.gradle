@@ -60,19 +60,10 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     // Testing-only dependencies
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:core:' + rootProject.coreVersion
-    androidTestImplementation 'androidx.test:core-ktx:' + rootProject.coreVersion
-    androidTestImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
-    androidTestImplementation 'androidx.test.ext:junit-ktx:' + rootProject.extJUnitVersion
-    androidTestImplementation 'androidx.test:rules:' + rootProject.rulesVersion
-    androidTestImplementation 'androidx.test:runner:' + rootProject.runnerVersion
-    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
-    androidTestImplementation 'androidx.test.espresso:espresso-contrib:' + rootProject.espressoVersion
 
     implementation 'com.android.billingclient:billing:2.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
