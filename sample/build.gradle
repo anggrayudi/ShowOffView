@@ -11,6 +11,12 @@ android {
             keyPassword findProperty("keyPassword")
             storeFile file(findProperty("storeFile"))
         }
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+            storeFile file("${System.properties['user.home']}${File.separator}.android${File.separator}debug.keystore")
+        }
     }
 
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -35,7 +41,7 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
